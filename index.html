@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="minimal-ui, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+<meta name="keywords" content="BattleDudes, io, game, battle, dudes, battle dudes, shooter, multiplayer, online, battle dudes io, battle dudes game, dudus, battle dudus">
+<meta name="author" content="Sarunas">
+<meta name="apple-itunes-app" content="app-id=1557142970">
+<title>Battle Dudes - 2D Multiplayer Battle Shooter Unblocked - Unblocked Games 66</title>
+<script>
+            window['gtag_enable_tcf_support'] = true;
+        </script>
+
+<script async src="/patch/js/null.js?https://www.googletagmanager.com/gtag/js?id=G-VLWN5MYV2Y"></script>
+<script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-VLWN5MYV2Y');
+        </script>
+<script>
+            if (!window.location.search.includes("customSdk")) { 
+                var aiptag = aiptag || {};
+                aiptag.cmd = aiptag.cmd || [];
+                aiptag.cmd.display = aiptag.cmd.display || [];
+                aiptag.cmd.player = aiptag.cmd.player || [];
+
+                //CMP tool settings
+                aiptag.cmp = {
+                    show: false,
+                }
+
+                var script = document.createElement("script")
+                if (window.location.hostname.includes('royaledudes')) {
+                    script.src = "//api.adinplay.com/libs/aiptag/pub/NTT/royaledudes.io/tag.min.js";
+                }
+                else {
+                    script.src = "//api.adinplay.com/libs/aiptag/pub/NTT/battledudes.io/tag.min.js";
+                }
+                script.setAttribute('async', true);
+                script.onload = () => {
+                    var script2 = document.createElement("script")
+                    script2.src = "patch/js/null.js?pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8891237416979695";
+                    script2.setAttribute('async', true);
+                    script2.setAttribute('data-ad-client', "ca-pub-8891237416979695");
+                    
+                    //script2.setAttribute('data-adbreak-test', "on");
+
+                    script2.setAttribute("data-ad-frequency-hint", "90s");
+                    document.head.appendChild(script2);
+
+                    window.adsbygoogle = window.adsbygoogle || [];
+                    window.adBreak = window.adConfig = function(o) {adsbygoogle.push(o);}
+
+                    window.adConfig({
+                        preloadAdBreaks: 'on',
+                        sound: 'off',
+                        onReady: () => {
+                            console.log("H5 games gifts ready");
+                        }, 
+                    });
+                }
+                document.head.appendChild(script);
+            }
+
+            if (window.location.hostname.includes("staging") && !window.location.href.includes('code=998')) {
+                // Redirect or display an error message
+                window.location.href = 'https://battledudes.io'
+            }
+        </script>
+<script src="prebid-ads.js"></script>
+<script>
+            if (window.location.hostname.includes('royaledudes')) {
+                window.DG_GAMETYPE = 2;
+            }
+
+            //DEV
+            if (window.location.hostname.includes('localhost') || window.location.hostname.includes('192.168.0.')) {
+                window.DG_GAMETYPE = 1;
+            }
+        </script>
+</head>
+<style>
+        body {
+            background-color: black !important;
+            overflow: hidden;
+        }
+        #loading_screen {
+            background: url('/assets/sprites/ui/background.jpeg') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+
+            z-index: -200;
+
+            pointer-events: none;
+            user-select: none;
+        }
+        #first_loading_text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: whitesmoke;
+            font-family: Tahoma, Verdana, Roboto, sans-serif;
+            font-weight: bold;
+
+            font-size: 2vw;
+            z-index: -180;
+
+            pointer-events: none;
+            user-select: none;
+        }
+    </style>
+<body style="overflow:hidden;">
+
+<div id="first_loading_text">Loading...</div>
+<div id="vue_app"></div>
+<script>
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function() { 
+                if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                    var gameScript = document.createElement("script");
+                    gameScript.setAttribute("src", "dist/vue_app_" + xmlHttp.responseText + ".bundle.js");
+                    document.body.appendChild(gameScript);
+                }
+            }
+            var matchmakerUrl;
+            if (document.location.href.includes("localhost") || document.location.href.includes("192.168.0.")) {
+                matchmakerUrl = "/currentGameVersion?cachebust=" + (Math.random() * 100000);
+            }
+            else if (document.location.href.includes("staging.battledudes.io")) {
+                matchmakerUrl = "https://staging_matchmaker.battledudes.io/currentGameVersion?cachebust=" + (Math.random() * 100000);
+            }
+            else {
+                matchmakerUrl = "https://matchmaker.battledudes.io/currentGameVersion?cachebust=" + (Math.random() * 100000);
+            }
+            xmlHttp.open("GET", matchmakerUrl, true); // true for asynchronous 
+            xmlHttp.send(null);
+        </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8be48a386d6ac52d","version":"2024.8.0","r":1,"serverTiming":{"name":{"cfL4":true}},"token":"4806241133754f48ac2c062231c425ea","b":1}' crossorigin="anonymous"></script>
+</body>
+</html> 
